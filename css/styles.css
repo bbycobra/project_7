@@ -80,7 +80,7 @@ input[type="search" i] {
 .wrapper {
     display: flex;
     position: absolute;
-    width: 200px;
+    max-width: 310px;
     padding: 10px;
     height: 50px;
     border-radius: 10px;
@@ -225,7 +225,7 @@ main {
     margin: 0;
     }
     .wrapper {
-        width: 200px;
+        width: 100%;
     }
     .headline {
         padding-right: 60px;
