@@ -80,7 +80,7 @@ input[type="search" i] {
 .wrapper {
     display: flex;
     position: absolute;
-    max-width: 310px;
+    max-width: 210px;
     padding: 10px;
     height: 50px;
     border-radius: 10px;
