@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <title>WebApp Dashboard</title>
+    <meta charset="utf-8">
+    <link href='https://fonts.googleapis.com/css?family=Playfair Display' rel='stylesheet' type='text/css'>
+    <link href="css/styles.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+        integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+</head>
+
+<body class="grid-container">
+
+    <header>
+        <nav class="main-nav">
+            <div class="header-left">
+                <h1 class="header-title">Your <span>App</span></h1>
+            </div>
+            <div class="bell-icon header-right">
+                <img src="icons/icon-bell.svg" alt="notifications bell" class="bell">
+                <div id="vertical-line"></div>
+                <img src="images/member-1.jpg" id="profile-avatar">
+                <h3 class="user-name">Vanessa Smith</h3>
+            </div>
+        </nav>
+
+    </header>
+
+    <navside>
+        <img src="icons/icon-dashboard.svg" class="graphic">
+        <img src="icons/icon-members.svg" class="graphic">
+        <img src="icons/icon-visits.svg" class="graphic">
+        <img src="icons/icon-settings.svg" class="graphic">
+    </navside>
+
+    <main>
+
+        <div class="main-header">
+            <h2 class="headline">Dashboard</h2>
+            <div class="main-header-search">
+                <input type="search" id="" placeholder="Search" />
+            </div>
+        </div>
+
+        <div class="wrapper">
+            <div class="alert-banner-close">x</div>
+            <div class="space">
+                <p class="alert" class="alert-banner" ><strong>Alert:</strong> You have 6 overdue tasks to complete.</p>
+            </div>
+        </div>
+
+        <section class="traffic">
+
+            <div class="traffic-header">
+                <h3>Traffic</h3>
+                <ul class="traffic-nav">
+                    <li class="traffic-nav-link">Hourly</li>
+                    <li class="traffic-nav-link">Daily</li>
+                    <li class="traffic-nav-link active">Weekly</li>
+                    <li class="traffic-nav-link">Monthly</li>
+                </ul>
+            </div>
+            <div class="widget-container-full">
+                <canvas id="traffic-chart"></canvas>
+            </div>
+        </section>
+
+        <section class="daily">
+
+            <h3>Daily Traffic</h3>
+            <div class="widget-container-half">
+                <canvas id="daily-chart"></canvas>
+            </div>
+        </section>
+
+        <div class="social-stats">
+            <h3>Social Stats</h3>
+            <div class="social-container">
+                <div class="social-image">
+                    <img src="">
+                </div>
+
+                <div class="social-text">
+                    <p>Twitter</p>
+                    <p>10,345</p>
+                </div>
+            </div>
+
+
+            <div class="social-container">
+                <div class="social-image">
+                    <img src="">
+                </div>
+
+                <div class="social-text">
+                    <p>Facebook</p>
+                    <p>8,545</p>
+                </div>
+            </div>
+
+            <div class="social-container">
+                <div class="social-image">
+                    <img src="">
+                </div>
+
+                <!-- <svg xmlns="http://www.w3.org/2000/svg" height="130" viewBox="0 0 54 54">
+                    <g id="Page-1" fill="none" fill-rule="evenodd">
+                        <rect id="Rectangle" width="130" height="130" fill="#9BCCF3" />
+                        <animate xlink:href="#rectangle" attributeType="auto" attributeName="fill" dur="5s" to="#f06d06"/>
+        <animate attributeType="CSS" attributeName="opacity" from="1" to="0" dur="5s" repeatCount="indefinite" />
+                    </g>
+                </svg> -->
+
+                <div class="social-text">
+                    <p>Instagram</p>
+                    <p>11,876</p>
+                </div>
+            </div>
+        </div>
+
+        <section class="members">
+            <h3>New Members</h3>
+
+            <div class="members-container">
+                <img src="" class="profile-image">
+                <div class="members-text">
+                    <p>Jhon Simps</p>
+                    <a href="#">jhon.simp80@example.com</a>
+                </div>
+                <p>09/13/15</p>
+            </div>
+        </section>
+
+        <section class="message">
+            <h3>Message User</h3>
+            <form class="widget-container">
+                <input type="text" placeholder="Search for user" class="form-field" id="userField">
+                <textarea placeholder="Message for user" class="form-area" id="messageField"></textarea>
+                <button class="button-primary" id="send">Send</button>
+            </form>
+        </section>
+
+        <section class="settings">
+            <h3>Settings</h3>
+            <!-- custom CSS toggle code-->
+            <!-- custom CSS toggle code-->
+            <select class="form-field" id="timezone">
+                <option disabled selected>Select a Timezone</option>
+                <option>Eastern</option>
+                <option>Central</option>
+                <option>Mountain</option>
+                <option>Pacific</option>
+            </select>
+            <div class="settings-button">
+                <button class="button-primary" id="save">Save</button>
+                <button class="button-disabled" id="cancel">Cancel</button>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="js/java.js"></script>
+    <script src="js/myChart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+
+
+
+</body>
+
+</html>
