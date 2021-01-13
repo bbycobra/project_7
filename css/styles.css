@@ -57,10 +57,19 @@ nav {
 
 .headline {
     padding-right: 60px;
+    margin: 0;
 }
+
+input[type="search" i] {
+    border-radius: 10px;
+    border: solid 1px lightgray;
+    }
 
 .main-header-search {
     margin-bottom: 2vh;
+    margin-top: 2vh;
+    width: 100%;
+    max-width: 507px;
 }
 
 .user-name {
@@ -120,15 +129,6 @@ nav {
     margin: 10px;
     width: 25px;
     padding-left: 5px;
-}
-
-
-input[type="search" i] {
-    display: flex;
-    width: 120%;
-    border: solid 2px lightgray;
-    border-radius: 10px;
-    margin-bottom: 15px;
 }
 
 .main-header {
@@ -217,7 +217,7 @@ main {
         justify-content: space-between;
     }
     input[type="search" i] {
-    width: 105%;
+    max-width: 27vh;
     padding: 4px;
     height: 30px;
     border-radius: 10px;
@@ -226,6 +226,10 @@ main {
     }
     .wrapper {
         width: 200px;
+    }
+    .headline {
+        padding-right: 60px;
+        margin-bottom: 10px;
     }
 }
 
