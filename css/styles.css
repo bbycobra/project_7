@@ -75,7 +75,6 @@ input[type="search" i] {
 
 .main-header-search {
     margin-bottom: 2vh;
-    margin-top: 2vh;
     width: 100%;
     max-width: 507px;
 }
@@ -96,6 +95,7 @@ input[type="search" i] {
     padding: 2px;
     font-weight: bold;
     position: absolute;
+    cursor: pointer;
 }
 
 .space {
@@ -128,26 +128,33 @@ input[type="search" i] {
 }
 
 .main-header {
-    padding-top: 9vh;
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
 }
 
-.traffic {
-    padding-top: 7vh;
+.traffic-header {
+    display: flex;
+}
+
+.traffic-headline {
+    font-size: 20px;
+    font-family: 'Playfair Display';
+    font-weight: bold;
+    margin: 13px 0px 13px;
 }
 
 .traffic-nav {
     list-style-type: none;
-    justify-content: space-evenly;
+    justify-content: flex-end;
     display: flex;
+    width: 100%;
     padding: 0;
 }
 
 .traffic-nav li {
-    word-spacing: 5px;
+    padding: 0 13px;
 }
 
 canvas {
@@ -180,7 +187,9 @@ canvas {
     display: grid;
     grid-template-columns: 50px 1fr;
     grid-template-rows: auto;
-    grid-template-areas: "header header" "nav    main";
+    grid-template-areas: 
+                        "header header" 
+                        "nav    main";
 }
 
 /* CONTAINERS */
@@ -199,6 +208,7 @@ navside {
 main {
     grid-area: main;
     margin-left: 20px;
+    padding-top: 7vh;
     margin-right: 20px;
     color: #4D535E;
 }
@@ -215,7 +225,7 @@ main {
 
 .wrapper {
     display: flex;
-    position: absolute;
+    position: relative;
     max-width: 1000vh;
     width: 194px;
     padding: 10px;
@@ -277,12 +287,8 @@ main {
         margin: 0;
         margin-top: 3vh;
     }
-    section.traffic {
-        padding-top: 4vh;
-    }
     .main-header {
         display: flex;
-        padding-top: 6vh;
         align-items: baseline;
         margin-bottom: 2vh;
     }
@@ -291,8 +297,8 @@ main {
 @media (min-width: 1024px) {
     navside {
         grid-area: nav;
-        padding-top: 55px;
-        padding-right: 10px;
+        padding-top: 61px;
+        padding-right: 0px;
     }
     .header-title,
     .user-name {
@@ -327,19 +333,16 @@ main {
     }
     .graphic {
         margin: 10px;
-        width: 25px;
+        width: 30px;
         padding-left: 5px;
     }
     .wrapper {
-        width: 919px;
+        width: 930px;
         height: 5vh;
     }
     .alert-banner-close {
         top: 16%;
         left: 97%;
     }
-    /* .headline {
-        padding-top: 7vh;
-    } */
 }
 
