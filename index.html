@@ -5,6 +5,7 @@
     <title>WebApp Dashboard</title>
     <meta charset="utf-8">
     <link href='https://fonts.googleapis.com/css?family=Playfair Display' rel='stylesheet' type='text/css'>
+    <link href="css/toggle-switch.css" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
@@ -67,15 +68,25 @@
         </div>
 
         <section class="traffic">
-
+        
             <div class="traffic-header">
+
                 <div class="traffic-headline">Traffic</div>
-                <ul class="traffic-nav">
-                    <li class="traffic-nav-link">Hourly</li>
-                    <li class="traffic-nav-link">Daily</li>
-                    <li class="traffic-nav-link active">Weekly</li>
-                    <li class="traffic-nav-link">Monthly</li>
-                </ul>
+                <div class="traffic-nav switch-toggle switch-candy">
+                   
+                    <input id="hourly" name="view" type="radio" checked>
+                    <label for="hourly" onclick="">Hourly</label>
+                    
+                    <input id="daily" name="view" type="radio" checked>
+                    <label for="daily" onclick="">Daily</label>
+
+                    <input id="weekly" name="view" type="radio" checked>
+                    <label for="weekly" onclick="">Weekly</label>
+
+                    <input id="monthly" name="view" type="radio" checked>
+                    <label for="monthly" onclick="">Monthly</label>
+                    <a></a>
+                </div>
             </div>
             <div class="widget-container-full">
                 <canvas id="traffic-chart"></canvas>
