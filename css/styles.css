@@ -4,12 +4,6 @@
     box-sizing: border-box;
 }
 
-h2,
-h3 {
-    font-size: 20px;
-    font-family: 'Playfair Display'
-}
-
 p {
     font-size: small;
     margin: 0;
@@ -26,7 +20,7 @@ body {
 
 nav {
     display: flex;
-    max-width: 1300px;
+    max-width: 3300px;
     background-color: #7477bf;
     align-items: center;
     flex-wrap: wrap;
@@ -63,7 +57,7 @@ nav {
     font-weight: 100;
 }
 
-.headline {
+.main-headline {
     padding-right: 60px;
     margin: 0;
 }
@@ -136,39 +130,28 @@ input[type="search" i] {
 
 .traffic-header {
     display: flex;
-}
-
-.traffic-headline {
-    font-size: 20px;
-    font-family: 'Playfair Display';
-    font-weight: bold;
-    margin: 13px 0px 13px;
-}
-
-.traffic-nav {
-    list-style-type: none;
-    justify-content: flex-end;
-    display: flex;
-    width: 100%;
-    padding: 0;
+    flex-direction: column;
 }
 
 .traffic-nav li {
     padding: 0 13px;
 }
 
-canvas {
-    width: 100%
+.form-field,
+.form-area {
+    margin: 10px 0;
+    border-radius: 5px;
 }
 
-.members,
-.message,
-.settings {
-    background-color: black;
+.button-primary {
+    border-radius: 5px; 
 }
 
 .settings {
     margin-bottom: 10px;
+}
+section.daily, section.mobile{
+    width: 50%;
 }
 
 /* BELL */
@@ -179,6 +162,24 @@ canvas {
 
 #bell-icon:hover {
     fill: #85db81;
+}
+
+/* TOGGLE SWTICH */
+
+.traffic-nav, 
+.switch-toggle,
+.switch-candy {
+    cursor: pointer;
+    overflow: hidden;
+    background-color: lightgray;
+    font-size: 12px;
+    margin: 10px 0;
+}
+
+.settings-switch {
+    cursor: pointer;
+    font-size: 12px;
+    width: 12vh;
 }
 
 /* GRID */
@@ -201,29 +202,27 @@ header {
 navside {
     grid-area: nav;
     background-color: #4d4c72;
-    padding-top: 53px;
+    padding-top: 65px;
     padding-right: 10px;
 }
 
 main {
     grid-area: main;
     margin-left: 20px;
-    padding-top: 7vh;
+    padding-top: 8vh;
     margin-right: 20px;
     color: #4D535E;
+    display: grid;
+    grid-template-columns: 1fr;
+
 }
 
-.widget-container-full,
-.widget-container-half {
-    background-color: black;
-}
 
 .social-container {
-    background-color: black;
     padding: 5px;
 }
 
-.wrapper {
+#banner {
     display: flex;
     position: relative;
     max-width: 1000vh;
@@ -233,6 +232,10 @@ main {
     border-radius: 10px;
     border: solid 1px white;
     background-color: #7377bf;
+}
+.chart-container canvas{
+    max-width: 100%;
+    min-height: 300px;
 }
 
 /* MEDIA QUERIES */
@@ -252,14 +255,59 @@ main {
     }
     .wrapper {
         width: 207px;
+        margin-bottom: 10px;
     }
-    .headline {
+    .main-headline {
         padding-right: 60px;
         margin-bottom: 10px;
     }
 }
 
 @media (min-width: 768px) {
+    main #main-header {
+        grid-area: header;
+    }
+    main #banner {
+        grid-area: banner;
+    }
+    main #traffic {
+        grid-area: traffic;
+    }
+    main #daily {
+        grid-area: daily;
+    }
+    main #mobile {
+        grid-area: mobile;
+    }
+    main #social-stats {
+        grid-area: social;
+    }
+    main #members {
+        grid-area: members;
+    }
+    main #activities {
+        grid-area: activities;
+    }
+    main #message {
+        grid-area: message;
+    }
+    main #settings {
+        grid-area: settings;
+    }
+    main{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "header  header"
+            "banner  banner"
+            "traffic traffic"
+            "daily   mobile"
+            "social  social"
+            "members activities"
+            "message settings";
+
+    }
+   
     input[type="search" i] {
         width: 109%;
         padding: 8px;
@@ -274,23 +322,26 @@ main {
         font-weight: bold;
         position: absolute;
     }
-    .wrapper {
+    #banner {
         width: 661px;
         height: 5vh;
     }
-    .headline {
+    .main-headline {
         margin: 0;
         padding: 0;
     }
     .main-header-search {
         width: 193px;;
         margin: 0;
-        margin-top: 3vh;
     }
     .main-header {
         display: flex;
-        align-items: baseline;
-        margin-bottom: 2vh;
+    }
+    .traffic-nav {
+        width: 100%;
+    }
+    navside {
+        padding-top: 68px;
     }
 }
 
@@ -336,7 +387,7 @@ main {
         width: 30px;
         padding-left: 5px;
     }
-    .wrapper {
+    #banner {
         width: 930px;
         height: 5vh;
     }
