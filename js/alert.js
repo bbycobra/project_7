@@ -1,4 +1,4 @@
-const alertBanner = document.querySelector('.wrapper');
+const alertBanner = document.querySelector('#banner');
 
 const alertBannerClose = document.querySelector('.alert-banner-close');
 alertBannerClose.addEventListener('click', e => {
