@@ -4,6 +4,7 @@
 <head>
     <title>WebApp Dashboard</title>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href='https://fonts.googleapis.com/css?family=Playfair Display' rel='stylesheet' type='text/css'>
     <link href="css/toggle-switch.css" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet">
@@ -21,6 +22,7 @@
             </div>
             <div class="header-right">
 
+                <div class="bell-svg">
                 <svg version="1.1" class="bell" xmlns="http://www.w3.org/2000/svg"
                     xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 32 32"
                     style="enable-background:new 0 0 32 32;" xml:space="preserve">
@@ -36,6 +38,14 @@
                         </g>
                     </g>
                 </svg>
+                </div>
+
+                <div class="circle-svg">
+                <svg viewBox="0 0 100 100" class="circle" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="50" cy="50" r="50"/>
+                </svg>
+                </div>
+                
                 <div id="vertical-line"></div>
                 <img src="images/member-1.jpg" id="profile-avatar">
                 <h3 class="user-name">Vanessa Smith</h3>
@@ -192,7 +202,7 @@
                     <div class="info">
                         <p>Jhon Simps</p>
                         <span class="email">jhon.simp80@example.com<span>
-                        <p>09/13/15</p>
+                            <p>09/13/15</p>
                     </div>
                 </div>
 
@@ -222,21 +232,21 @@
 
             <div class="activities-wrap">
             <img src="images/member-4.jpg" id="activity-avatar"> 
-            <p>Michael Korn commented on YourApp's SEO Tips.
+            <p><em>Michael Korn commented on YourApp's SEO Tips.</em>
             <br>
             <br><strong>4 hours ago</strong></p>
             </div>
 
             <div class="activities-wrap">
             <img src="images/member-3.jpg" id="activity-avatar"> 
-            <p>Catherine Song shared a post on her feed.
+            <p><em>Catherine Song shared a post on her feed.</em>
             <br>
             <br><strong>1 minute ago</strong></p>
             </div>
 
             <div class="activities-wrap">
                 <img src="images/member-2.jpg" id="activity-avatar"> 
-                <p>Jhon Simps commented on Facebook's Change for 2016.
+                <p><em>Jhon Simps commented on Facebook's Change for 2016.</em>
                 <br>
                 <br><strong>30 minute ago</strong></p>
                 </div>
@@ -297,6 +307,7 @@
     <script src="js/alert.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
     <script src="js/myChart.js"></script>
+    <script src="js/message.js"></script>
     <script src="https://d3js.org/d3.v6.min.js"></script>
 
 

@@ -26,11 +26,6 @@ body {
     background-color: white;
 }
 
-section {
-    padding-bottom: 15px;
-    border-bottom: 1px dashed lightgray;
-}
-
 /* ELEMENTS */
 
 nav {
@@ -62,7 +57,7 @@ nav {
 
 .header-title,
 .user-name {
-    margin: 5px;
+    margin: 6px;
     font-size: 13px;
     font-weight: 100;
     text-transform: uppercase;
@@ -119,9 +114,16 @@ input[type="search" i] {
 
 .bell {
     margin-top: 10px;
-    margin-right: 10px;
     margin-bottom: 10px;
-    width: 33px;
+    width: 21px;
+}
+
+.circle{
+    margin-top: 10px;
+    margin-right: 12px;
+    margin-bottom: 10px;
+    width: 7px;
+    fill: #85db81;
 }
 
 #vertical-line {
@@ -367,6 +369,20 @@ main {
 }
 
 @media (min-width: 768px) {
+    main{
+        display: grid;
+        grid-gap: 20px;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "header  header"
+            "banner  banner"
+            "traffic traffic"
+            "daily   mobile"
+            "social  social"
+            "members activities"
+            "message settings";
+
+    }
     main #main-header {
         grid-area: header;
     }
@@ -397,21 +413,6 @@ main {
     main #settings {
         grid-area: settings;
     }
-    main{
-        display: grid;
-        grid-gap: 15px;
-        grid-template-columns: 1fr 1fr;
-        grid-template-areas:
-            "header  header"
-            "banner  banner"
-            "traffic traffic"
-            "daily   mobile"
-            "social  social"
-            "members activities"
-            "message settings";
-
-    }
-   
     input[type="search" i] {
         width: 109%;
         padding: 8px;
@@ -489,6 +490,16 @@ main {
         width: 100%;
         height: 100%;
     }
+    .activities-wrap{
+        margin: 8px 0;
+    }
+    #members,
+    #activities {
+        padding-bottom: 15px;
+        border-bottom: 1px solid lightgray;
+        border-top: 1px solid lightgray;
+    }
+    
 }
 
 @media (min-width: 1024px) {
@@ -512,7 +523,8 @@ main {
         font-weight: lighter;
     }
     .bell {
-        width: 43px;
+        width: 23px;
+        margin-top: 15px;
     }
     #vertical-line {
         border-left: thin solid black;
@@ -543,6 +555,12 @@ main {
     }
     #send {
         width: 80%
+    }
+    #save {
+        width: 100%;
+        height: 33px;
+        margin-top: 3px;
+        
     }
 }
 
