@@ -22,30 +22,30 @@
             </div>
             <div class="header-right">
 
-                <div class="bell-svg">
-                <svg version="1.1" class="bell" xmlns="http://www.w3.org/2000/svg"
-                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 32 32"
-                    style="enable-background:new 0 0 32 32;" xml:space="preserve">
-                    <style type="text/css">
-                        .st0 {
-                            fill: #FFFFFF;
-                        }
-                    </style>
-                    <g id="_x36__6_">
-                        <g>
-                            <path class="st0" id="bell-icon" d="M24,18v-8c0-5.5-4.5-10-10-10S4,4.5,4,10v8l-4,8h9.1c0.5,2.3,2.5,4,4.9,4s4.4-1.7,4.9-4H28L24,18z M14,28
+                <div class="bell">
+                    <svg version="1.1" class="bell-svg" xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 32 32"
+                        style="enable-background:new 0 0 32 32;" xml:space="preserve">
+                        <style type="text/css">
+                            .st0 {
+                                fill: #FFFFFF;
+                            }
+                        </style>
+                        <g id="_x36__6_">
+                            <g>
+                                <path class="bell-icon" d="M24,18v-8c0-5.5-4.5-10-10-10S4,4.5,4,10v8l-4,8h9.1c0.5,2.3,2.5,4,4.9,4s4.4-1.7,4.9-4H28L24,18z M14,28
 			c-1.3,0-2.4-0.8-2.8-2h5.6C16.4,27.2,15.3,28,14,28z M3,24l3-6v-8c0-4.4,3.6-8,8-8s8,3.6,8,8v8l3,6H3z" />
+                            </g>
                         </g>
-                    </g>
-                </svg>
+                    </svg>
                 </div>
 
                 <div class="circle-svg">
-                <svg viewBox="0 0 100 100" class="circle" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="50" cy="50" r="50"/>
-                </svg>
+                    <svg viewBox="0 0 100 100" class="circle" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="50" cy="50" r="50" />
+                    </svg>
                 </div>
-                
+
                 <div id="vertical-line"></div>
                 <img src="images/member-1.jpg" id="profile-avatar">
                 <h3 class="user-name">Vanessa Smith</h3>
@@ -102,20 +102,20 @@
             <div class="chart-container">
                 <canvas id="traffic-chart"></canvas>
             </div>
-            
+
         </section>
 
         <section id="daily">
             <h3 class="headline">Daily Traffic</h3>
-        
+
             <div class="chart-container">
                 <canvas id="daily-chart"></canvas>
             </div>
         </section>
-        
+
         <section id="mobile">
             <h3 class="headline">Mobile Traffic</h3>
-        
+
             <div class="chart-container">
                 <canvas id="mobile-chart"></canvas>
             </div>
@@ -164,7 +164,7 @@
             <div class="social-container">
                 <div class="social-image">
                     <svg version="1.1" id="google-icon" xmlns="http://www.w3.org/2000/svg" height="56.693px"
-                    width="56.693px" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 32 32"
+                        width="56.693px" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 32 32"
                         style="enable-background:new 0 0 32 32;" xml:space="preserve">
                         <path d="M17.7,25.7c0-0.3,0-0.5-0.1-0.8c-0.1-0.2-0.1-0.5-0.2-0.7c-0.1-0.2-0.2-0.4-0.3-0.7c-0.2-0.2-0.3-0.4-0.4-0.6
                             c-0.1-0.2-0.3-0.3-0.5-0.6c-0.2-0.2-0.4-0.4-0.5-0.5c-0.1-0.1-0.3-0.3-0.6-0.5c-0.3-0.2-0.5-0.4-0.6-0.4s-0.3-0.2-0.6-0.4
@@ -198,28 +198,35 @@
             <div class="members-wrap">
 
                 <div class="members-container">
-                    <img src="images/member-2.jpg" id="members-avatar">
-                    <div class="info">
-                        <p>Jhon Simps</p>
-                        <span class="email">jhon.simp80@example.com<span>
-                            <p>09/13/15</p>
+                    <img src="images/member-2.jpg" class="members-avatar">
+                    <div class="primary-info">
+                        <h5>Jhon Simps</h5>
+                    </div>
+                    <div class="secondary-info">
+                        <p class="email">jhon.simp80@example.com</p>
+                        <p>09/13/15</p>
                     </div>
                 </div>
 
                 <div class="members-container">
-                    <img src="images/member-3.jpg" id="members-avatar">
-                    <div class="info">
-                        <p>Catherine Song</p>
-                        <span class="email">catherine.song12@example.com<span>
+                    <img src="images/member-3.jpg" class="members-avatar">
+                    <div class="primary-info">
+                        <h5>Catherine Song</h5>
+                    </div>
+                    <div class="secondary-info">
+                        <p class="email">catherine.song12@example.com
+                        <p>
                         <p>02/20/17</p>
                     </div>
                 </div>
 
                 <div class="members-container">
-                    <img src="images/member-4.jpg" id="members-avatar">
-                    <div class="info">
-                        <p>Michael Korn</p>
-                        <span class="email">michael.korn@example.com<span>
+                    <img src="images/member-4.jpg" class="members-avatar">
+                    <div class="primary-info">
+                        <h5>Michael Korn</h5>
+                    </div>
+                    <div class="secondary-info">
+                        <p class="email">michael.korn@example.com</p>
                         <p>11/13/14</p>
                     </div>
                 </div>
@@ -230,26 +237,36 @@
         <section id="activities">
             <h3 class="headline">Recent Activity</h3>
 
-            <div class="activities-wrap">
-            <img src="images/member-4.jpg" id="activity-avatar"> 
-            <p><em>Michael Korn commented on YourApp's SEO Tips.</em>
-            <br>
-            <br><strong>4 hours ago</strong></p>
-            </div>
-
-            <div class="activities-wrap">
-            <img src="images/member-3.jpg" id="activity-avatar"> 
-            <p><em>Catherine Song shared a post on her feed.</em>
-            <br>
-            <br><strong>1 minute ago</strong></p>
-            </div>
-
-            <div class="activities-wrap">
-                <img src="images/member-2.jpg" id="activity-avatar"> 
-                <p><em>Jhon Simps commented on Facebook's Change for 2016.</em>
-                <br>
-                <br><strong>30 minute ago</strong></p>
+            <div class="activities-container">
+                <img src="images/member-2.jpg" class="members-avatar">
+                <div class="primary-info">
+                    <p>Jhon Simps commented on YourApp's SEO Tips.</p>
                 </div>
+                <div class="secondary-info">
+                    <p><strong>4 hours ago</strong></p>
+                </div>
+            </div>
+
+            <div class="activities-container">
+                <img src="images/member-3.jpg" class="members-avatar">
+                <div class="primary-info">
+                    <p>Catherine Song shared a post on her feed.</p>
+                </div>
+                <div class="secondary-info">
+                    <p><strong>1 minute ago</strong></p>
+                </div>
+            </div>
+
+            <div class="activities-container">
+                <img src="images/member-4.jpg" class="members-avatar">
+                <div class="primary-info">
+                    <p>Michael Korn added a new lead.</p>
+                </div>
+                <div class="secondary-info">
+                    <p><strong>5 hours ago</strong></p>
+                </div>
+            </div>
+        </div>
 
         </section>
 

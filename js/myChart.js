@@ -3,9 +3,7 @@ var ctx = document.getElementById('traffic-chart').getContext('2d');
 var myChart = new Chart(ctx, {
     type: 'line',
     data: {
-        labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
         datasets: [{
-            label: '# of Votes',
             data: [12, 19, 3, 5, 2, 3],
             backgroundColor: [
                 'rgba(255, 99, 132, 0.2)',
@@ -43,10 +41,8 @@ var ctx = document.getElementById('daily-chart').getContext('2d');
 var myChart = new Chart(ctx, {
     type: 'bar',
     data: {
-        labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
         datasets: [{
-            label: '# of Votes',
-            data: [12, 19, 3, 5, 2, 3],
+            data: [12, 19, 3],
             backgroundColor: [
                 'rgba(255, 99, 132, 0.2)',
                 'rgba(54, 162, 235, 0.2)',
@@ -81,11 +77,9 @@ var myChart = new Chart(ctx, {
 var ctx = document.getElementById('mobile-chart').getContext('2d');
 
 var myChart = new Chart(ctx, {
-    type: 'pie',
+    type: 'doughnut',
     data: {
-        labels: ['Yellow', 'Green', 'Purple'],
         datasets: [{
-            label: '# of Votes',
             data: [3, 5, 2],
             backgroundColor: [
                 'rgba(255, 99, 132, 0.2)',

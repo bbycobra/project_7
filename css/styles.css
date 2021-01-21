@@ -10,6 +10,10 @@ h3 {
     grid-column: 1 / -1;
 }
 
+h5 {
+    margin: 0;
+}
+
 p {
     font-size: small;
     margin: 0;
@@ -57,7 +61,7 @@ nav {
 
 .header-title,
 .user-name {
-    margin: 6px;
+    margin: 5px;
     font-size: 13px;
     font-weight: 100;
     text-transform: uppercase;
@@ -113,16 +117,16 @@ input[type="search" i] {
 }
 
 .bell {
-    margin-top: 10px;
-    margin-bottom: 10px;
-    width: 21px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+    width: 35px;
 }
 
 .circle{
     margin-top: 10px;
     margin-right: 12px;
     margin-bottom: 10px;
-    width: 7px;
+    width: 4px;
     fill: #85db81;
 }
 
@@ -172,18 +176,12 @@ input[type="search" i] {
 .email {
     font-size: 13px;
     margin-left: 3px;
+
 }
 
-.info p {
-    font-weight: bolder;
-    margin: 3px;
-}
-
-#members-avatar {
+.members-avatar {
     border-radius: 50%;
-    height: 33px;
-    margin-top: 10px;
-    margin-bottom: 3px;
+    width: 20%;
 }
 
 #activity-avatar {
@@ -201,6 +199,7 @@ input[type="search" i] {
 .form-field,
 .form-area {
     border-radius: 5px;
+    width: 100%;
     margin: 10px 0px;
     background-color: #fafafa;
 }
@@ -263,11 +262,11 @@ section.daily, section.mobile{
 
 /* BELL */
 
-#bell-icon {
-    transition: .3s ease-out;
+.bell-svg {
+    fill: white;
 }
 
-#bell-icon:hover {
+.bell-svg:hover {
     fill: #85db81;
 }
 
@@ -305,14 +304,12 @@ section.daily, section.mobile{
 header {
     grid-area: header;
 }
-
 navside {
     grid-area: nav;
     background-color: #4d4c72;
     padding-top: 65px;
     padding-right: 10px;
 }
-
 main {
     grid-area: main;
     padding: 8vh 20px 0 20px;
@@ -321,12 +318,9 @@ main {
     grid-template-columns: 1fr;
 
 }
-
-
 .social-container {
     padding: 5px;
 }
-
 #banner {
     display: flex;
     position: relative;
@@ -365,6 +359,10 @@ main {
     .main-headline {
         padding-right: 60px;
         margin-bottom: 10px;
+    }
+    .members-container,
+    .activities-container {
+        padding: 10px 0;
     }
 }
 
@@ -490,16 +488,35 @@ main {
         width: 100%;
         height: 100%;
     }
-    .activities-wrap{
-        margin: 8px 0;
-    }
     #members,
     #activities {
         padding-bottom: 15px;
         border-bottom: 1px solid lightgray;
         border-top: 1px solid lightgray;
     }
-    
+    .members-container,
+    .activities-container{
+        display: grid;
+        grid-template-columns: 40px 1fr;
+        grid-template-areas:
+        "picture primary"
+        "picture secondary";
+        align-items: center;
+        padding: 10px 0;
+    }
+    .primary-info {
+        grid-area: primary;
+        font-weight: bolder;
+    }
+    .secondary-info{
+        grid-area: secondary;
+        display: flex;
+        justify-content: space-between;
+    }
+    .members-avatar{
+        grid-area: picture;
+        width: 100%;
+    }
 }
 
 @media (min-width: 1024px) {
@@ -523,7 +540,7 @@ main {
         font-weight: lighter;
     }
     .bell {
-        width: 23px;
+        width: 33px;
         margin-top: 15px;
     }
     #vertical-line {
