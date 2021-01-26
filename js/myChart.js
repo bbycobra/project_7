@@ -3,35 +3,33 @@ var ctx = document.getElementById('traffic-chart').getContext('2d');
 var myChart = new Chart(ctx, {
     type: 'line',
     data: {
+        labels: ["16-22", "23-29", "30-5", "6-12", "13-19", "20-26", "27-3",
+            "4-10", "11-17", "18-24", "25-31"
+        ],
         datasets: [{
-            data: [12, 19, 3, 5, 2, 3],
-            backgroundColor: [
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(255, 206, 86, 0.2)',
-                'rgba(75, 192, 192, 0.2)',
-                'rgba(153, 102, 255, 0.2)',
-                'rgba(255, 159, 64, 0.2)'
+            data: [750, 1250, 1000, 2000, 1500, 1750, 1250, 1850, 2250, 1500,
+                2500
             ],
-            borderColor: [
-                'rgba(255, 99, 132, 1)',
-                'rgba(54, 162, 235, 1)',
-                'rgba(255, 206, 86, 1)',
-                'rgba(75, 192, 192, 1)',
-                'rgba(153, 102, 255, 1)',
-                'rgba(255, 159, 64, 1)'
+            backgroundColor: [
+                'rgba(116, 119, 191, .3)',
             ],
             borderWidth: 1
         }]
     },
     options: {
-        maintainAspectRatio: false, 
+        aspectRatio: 2.5,
+        animation: {
+            duration: 0
+        },
         scales: {
             yAxes: [{
                 ticks: {
                     beginAtZero: true
                 }
             }]
+        },
+        legend: {
+            display: false
         }
     }
 });
@@ -41,36 +39,33 @@ var ctx = document.getElementById('daily-chart').getContext('2d');
 var myChart = new Chart(ctx, {
     type: 'bar',
     data: {
+        labels: ["S", "M", "T", "W", "T", "F", "S"],
         datasets: [{
-            data: [12, 19, 3],
+            label: '# of Hits',
+            data: [75, 115, 175, 125, 225, 200, 100],
             backgroundColor: [
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(255, 206, 86, 0.2)',
-                'rgba(75, 192, 192, 0.2)',
-                'rgba(153, 102, 255, 0.2)',
-                'rgba(255, 159, 64, 0.2)'
-            ],
-            borderColor: [
-                'rgba(255, 99, 132, 1)',
-                'rgba(54, 162, 235, 1)',
-                'rgba(255, 206, 86, 1)',
-                'rgba(75, 192, 192, 1)',
-                'rgba(153, 102, 255, 1)',
-                'rgba(255, 159, 64, 1)'
+                '#7477BF',
+                '#7477BF',
+                '#7477BF',
+                '#7477BF',
+                '#7477BF',
+                '#7477BF',
+                '#7477BF',
             ],
             borderWidth: 1
         }]
     },
     options: {
-        maintainAspectRatio: false, 
         scales: {
             yAxes: [{
                 ticks: {
-                    beginAtZero: true
+                    beginAtZero:true
                 }
             }]
-        }
+        },
+        legend : {
+        display: false
+        }            
     }
 });
 
@@ -79,35 +74,26 @@ var ctx = document.getElementById('mobile-chart').getContext('2d');
 var myChart = new Chart(ctx, {
     type: 'doughnut',
     data: {
+        labels: ["Desktop", "Tablet", "Phones"],
         datasets: [{
-            data: [3, 5, 2],
+            label: '# of Users',
+            data: [2000, 550, 500],
             backgroundColor: [
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(255, 206, 86, 0.2)',
-                'rgba(75, 192, 192, 0.2)',
-                'rgba(153, 102, 255, 0.2)',
-                'rgba(255, 159, 64, 0.2)'
+                '#7477BF',
+                '#78CF82',
+                '#51B6C8'
             ],
-            borderColor: [
-                'rgba(255, 99, 132, 1)',
-                'rgba(54, 162, 235, 1)',
-                'rgba(255, 206, 86, 1)',
-                'rgba(75, 192, 192, 1)',
-                'rgba(153, 102, 255, 1)',
-                'rgba(255, 159, 64, 1)'
-            ],
-            borderWidth: 1
+            borderWidth: 0,
         }]
     },
     options: {
-        maintainAspectRatio: false, 
-        scales: {
-            yAxes: [{
-                ticks: {
-                    beginAtZero: true
-                }
-            }]
+        legend: {
+            position: 'right',
+            labels: {
+                boxWidth: 20,
+                fontStyle: 'bold'
+            }
         }
+            
     }
 });
